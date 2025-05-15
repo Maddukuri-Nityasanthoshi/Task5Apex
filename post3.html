@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript Closures</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="container">
+    <h1>📚 Understanding JavaScript Closures</h1>
+    <nav><a href="index.html">← Back to Home</a></nav>
+  </header>
+
+  <main class="container">
+    <img src="images/post3.jpg" alt="Closures" style="width:100%; border-radius:1rem;">
+    <article style="margin-top: 2rem;">
+      <p><strong>Published:</strong> May 10, 2025</p>
+      <p>A closure is a function that has access to variables in its outer scope even after the outer function has returned.</p>
+      <pre><code>function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
+const counter = outer();
+counter(); // 1
+counter(); // 2</code></pre>
+    </article>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 My Blog. All rights reserved.</p>
+  </footer>
+</body>
+</html>
